@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GPU Price Finder | Statistics</title>
+  <meta name="description" content="Used focused GPU price stats">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">GPU Price Finder</h1>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Search</a>
+        <a href="watchlist.html" class="nav-link">Watchlist</a>
+        <a href="stats.html" class="nav-link nav-active">Statistics</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="card" aria-labelledby="stats-title">
+      <div class="results-head">
+        <h2 id="stats-title">Statistics</h2>
+        <p class="results-message">
+          This page will summarize prices once AWS is wired in.
+        </p>
+      </div>
+
+      <div class="search-form" style="margin-top: 10px; max-width: 340px;">
+        <label for="statsModelSelect">GPU model</label>
+        <select id="statsModelSelect" name="model" disabled>
+          <option value="all">All models</option>
+        </select>
+
+        <p class="hint">
+          Model filter will work later. For now this is just the layout.
+        </p>
+      </div>
+
+      <div id="statsOutput" style="margin-top: 14px; display: grid; gap: 10px;">
+        <div class="card">
+          <strong>Total entries</strong>
+          <div class="results-message">Placeholder</div>
+        </div>
+
+        <div class="card">
+          <strong>Average used price</strong>
+          <div class="results-message">Placeholder</div>
+        </div>
+
+        <div class="card">
+          <strong>Average new price</strong>
+          <div class="results-message">Placeholder</div>
+        </div>
+
+        <div class="card">
+          <strong>Lowest price found</strong>
+          <div class="results-message">Placeholder</div>
+        </div>
+
+        <div class="card">
+          <strong>New versus used gap</strong>
+          <div class="results-message">Placeholder</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Sample project focused on used GPU pricing.</p>
+  </footer>
+</body>
+
+</html>

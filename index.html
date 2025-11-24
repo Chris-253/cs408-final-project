@@ -1,17 +1,83 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
+  <title>GPU Price Finder</title>
+  <meta name="description" content="Quick used focused GPU price lookup">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <h1>HTML Rocks!</h1>
-  <img src="img/compile.jpeg">
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">GPU Price Finder</h1>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link nav-active">Search</a>
+        <a href="watchlist.html" class="nav-link">Watchlist</a>
+        <a href="stats.html" class="nav-link">Statistics</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="card search-card" aria-labelledby="search-title">
+      <h2 id="search-title">Find a GPU</h2>
+
+      <form id="searchForm" class="search-form">
+        <label for="modelInput">GPU model</label>
+        <input
+          id="modelInput"
+          name="model"
+          type="text"
+          placeholder="Example: RTX 3060"
+          required
+        >
+
+        <label for="conditionSelect">Condition</label>
+        <select id="conditionSelect" name="condition">
+          <option value="all">All</option>
+          <option value="new">New</option>
+          <option value="used" selected>Used</option>
+        </select>
+
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+
+      <p class="hint">Used results are the main focus, new is just for comparison.</p>
+    </section>
+
+    <section class="card results-card" aria-labelledby="results-title">
+      <div class="results-head">
+        <h2 id="results-title">Results</h2>
+        <p id="resultsMessage" class="results-message">Search for a model to see prices.</p>
+      </div>
+
+      <div class="table-wrap" role="region" aria-live="polite" aria-label="GPU results">
+        <table id="resultsTable" class="results-table">
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">Condition</th>
+              <th scope="col">Price</th>
+              <th scope="col">Source</th>
+              <th scope="col">Save</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            <!-- main.js will be here later -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Sample project focused on used GPU pricing.</p>
+  </footer>
+
   <script type="module" src="js/main.js"></script>
 </body>
 
